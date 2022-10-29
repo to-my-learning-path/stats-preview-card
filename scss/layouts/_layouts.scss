@@ -1,0 +1,89 @@
+@use "../abstracts/abstracts" as variable;
+
+main {
+  background-color: variable.$dark-desaturated-blue;
+  border-radius: 0.5rem;
+  max-width: 70rem;
+  overflow: hidden;
+
+  @include variable.flex(row-reverse);
+
+  > * {
+    flex-basis: 50%;
+  }
+}
+
+.card-image {
+  background-color: variable.$soft-violet;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+  }
+}
+.card-content {
+  padding: 0rem 6rem;
+
+  > * {
+    margin: 2rem auto;
+  }
+  h1 > span {
+    color: variable.$soft-violet;
+  }
+  p {
+    color: variable.$slightly-transparent-white-main;
+    line-height: 1.5rem;
+  }
+}
+
+.card-stat-container {
+  margin-top: 5rem;
+  @include variable.flex(row, space-between);
+  text-transform: uppercase;
+
+  :first-child {
+    color: variable.$white;
+    font-size: 1.375rem;
+    font-weight: 700;
+  }
+
+  :last-child {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: variable.$slightly-transparent-white-stat;
+    font-family: variable.$font-family-secondary;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    max-width: 32rem;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+
+  .card-content {
+    padding: 0 3rem;
+    text-align: center;
+  }
+
+  .card-stat-container {
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    margin: 2rem 2rem;
+  }
+
+  .card-content {
+    padding: 0 1rem;
+  }
+}

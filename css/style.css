@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: hsl(233deg, 47%, 7%);
+  color: hsl(0deg, 0%, 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 0.5rem;
+  max-width: 70rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+main > * {
+  flex-basis: 50%;
+}
+
+.card-image {
+  background-color: hsl(277deg, 64%, 61%);
+}
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}
+
+.card-content {
+  padding: 0rem 6rem;
+}
+.card-content > * {
+  margin: 2rem auto;
+}
+.card-content h1 > span {
+  color: hsl(277deg, 64%, 61%);
+}
+.card-content p {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+}
+
+.card-stat-container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  text-transform: uppercase;
+}
+.card-stat-container :first-child {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+.card-stat-container :last-child {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  main {
+    max-width: 32rem;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+  .card-content {
+    padding: 0 3rem;
+    text-align: center;
+  }
+  .card-stat-container {
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 375px) {
+  main {
+    margin: 2rem 2rem;
+  }
+  .card-content {
+    padding: 0 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

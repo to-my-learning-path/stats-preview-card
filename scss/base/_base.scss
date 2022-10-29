@@ -1,0 +1,25 @@
+@use "../abstracts/abstracts" as variable;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variable.$font-family-primary;
+  font-size: variable.$font-size;
+  font-weight: 400;
+  background-color: variable.$very-dark-blue;
+  color: variable.$white;
+  min-height: 100vh;
+
+  @include variable.flex(column);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
